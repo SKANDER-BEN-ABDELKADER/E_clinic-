@@ -1,5 +1,5 @@
 
-const allowedRoles = ["user", "admin", "moderator" ];
+const allowedRoles = ["patient", "doctor" ];
 
 const verifyRoles = (...rolesToCheck) => {
     return (req, res, next) => {

@@ -1,31 +1,31 @@
-const multer = require("multer");
-const path = require("path");
+const express = require('express');
+const router = express.Router();
+const multer = require('multer');
+const { register } = require('../controllers/authController');
+const fs = require('fs');
+const path = require('path');
 
-// Set storage engine
+// Multer configuration
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, "./uploads"); // Folder where files will be saved
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname)); // Rename file to avoid conflicts
-    },
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
 });
 
-// File filter (optional)
-const fileFilter = (req, file, cb) => {
-    const allowedTypes = ["image/jpeg", "image/png", "image/gif"];
-    if (allowedTypes.includes(file.mimetype)) {
-        cb(null, true);
-    } else {
-        cb(new Error("Invalid file type. Only JPEG, PNG, and GIF are allowed."), false);
-    }
-};
+const upload = multer({ storage });
 
-// Initialize multer
-const upload = multer({
-    storage: storage,
-    limits: { fileSize: 2 * 1024 * 1024 }, // 2 MB limit
-    fileFilter: fileFilter,
-});
+// Apply middleware to route
+router.post('/register', upload.fields([
+  { name: 'medical_diploma', maxCount: 1 },
+  { name: 'proof_of_practice', maxCount: 1 },
+]), register);
 
-module.exports = upload;
+const uploadDirectory = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDirectory)) {
+  fs.mkdirSync(uploadDirectory);
+}
+
+module.exports = router;

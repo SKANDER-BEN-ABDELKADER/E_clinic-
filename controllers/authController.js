@@ -3,19 +3,27 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const { allowedRoles } = require("../middelwares/verifyRoles");
-const upload = require("../middlewares/upload");
+//const {upload} = require("../middelwares/upload");
 
 // Register a new user
 const register = async (req, res) => {
-    const { first_name, last_name, email, password, role } = req.body;
+    const { first_name, last_name, email, password, phone_number, role, CIN, MCRN,medical_diploma, proof_of_practice} = req.body;
+    //const medicalDiploma = req.files['medical_diploma']?.[0]?.path;
+    //const proofOfPractice = req.files['proof_of_practice']?.[0]?.path;
 
-    if (!first_name || !last_name || !email || !password) {
+    if (!first_name || !last_name || !email || !password || !phone_number) {
         return res.status(400).json({ message: "All fields are required." });
     }
 
-    if (!allowedRoles.includes(role)) {
-        return res.status(400).json({ message: "Role does not exist." });
+    if (role === 'doctor') {
+        if (!CIN || !medical_diploma  || !proof_of_practice  || !MCRN) {
+            return res.status(400).json({ message: "Doctors must provide CIN, medical diploma, proof of practice, and MCRN." });
+        }
     }
+
+    // if (!allowedRoles.includes(role)) {
+    //     return res.status(400).json({ message: "Role does not exist." });
+    // }
 
     try {
         const duplicatedEmail = await User.findOne({ email }).exec();
@@ -24,22 +32,29 @@ const register = async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
+
+
         const newUser = await User.create({
             first_name,
             last_name,
             email,
             password: hashedPassword,
+            phone_number,
             role,
+            CIN: role === 'doctor' ? CIN : undefined,
+            medical_diploma: role === 'doctor' ? medical_diploma : undefined,
+            proof_of_practice: role === 'doctor' ? proof_of_practice : undefined,
+            MCRN: role === 'doctor' ? MCRN : undefined,
             verified: false, 
         });
 
+        await newUser.save();
 
         const verificationToken = jwt.sign(
             { email: newUser.email },
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: "7d" }
         );
-
 
         const verificationLink = `http://localhost:5000/auth/verify-email?token=${verificationToken}`;
         // const verificationLink = ${process.env.BASE_URL}/verify-email/${verificationToken};
@@ -63,13 +78,11 @@ const register = async (req, res) => {
             `,
         };
         
-
+        
         // Send email
         await transporter.sendMail(mailOptions);
 
-        return res
-            .status(201)
-            .json({ message: "User created successfully. Please check your email to verify your account." });
+        return res.status(201).json({ message: "User created successfully. Please check your email to verify your account." });
     } catch (error) {
         console.error("Error:", error);
         return res.status(500).json({ message: "Server error." });
@@ -149,5 +162,7 @@ const verifyEmail = async (req, res) => {
         return res.status(400).json({ message: "Invalid or expired token." });
     }
 };
+
+
 
 module.exports = { register, login, verifyEmail };

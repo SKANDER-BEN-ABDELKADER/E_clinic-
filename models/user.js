@@ -17,10 +17,14 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    phone_number:{
+        type:Number,
+        required:true
+    },
     role:{
-        type:[String],
-        default : "user" ,
-        // enum : ["user", "admin", "moderator"]
+        type:String,
+        enum: ['doctor', 'patient'],
+        required:true
     },
     verified: { 
         type: Boolean, 
@@ -28,15 +32,22 @@ const userSchema = new mongoose.Schema({
     },
     CIN:{
         type:Number,
+        required:function () { return this.role === 'doctor'; }
     },
     medical_diploma:{
-        type:File,
+        type:String,  // Store the file path or URL as a string
+        required:function () { return this.role === 'doctor'; }
+
     },
     proof_of_practice:{
-        type:File,
+        type:String,
+        required:function () { return this.role === 'doctor'; }
+
     },
     MCRN:{
         type:Number,
+        required:function () { return this.role === 'doctor'; }
+
     },
     
 },{timestamps:true})
