@@ -1,0 +1,794 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "categorie": "Beauty",
+    "price": 92.87,
+    "stock": 60,
+    "rating": 0.9
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "categorie": "Beauty",
+    "price": 88.11,
+    "stock": 52,
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "categorie": "Beauty",
+    "price": 38.76,
+    "stock": 40,
+    "rating": 0.6
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "categorie": "Sports",
+    "price": 27.43,
+    "stock": 68,
+    "rating": 2.3
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "categorie": "Home",
+    "price": 1.77,
+    "stock": 37,
+    "rating": 1.5
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "categorie": "Pets",
+    "price": 13.78,
+    "stock": 42,
+    "rating": 2.9
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "categorie": "Home",
+    "price": 43.67,
+    "stock": 4,
+    "rating": 0.5
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "categorie": "Automotive",
+    "price": 94.18,
+    "stock": 81,
+    "rating": 2.4
+  },
+  {
+    "id": 9,
+    "name": "Product 9",
+    "categorie": "Sports",
+    "price": 99.49,
+    "stock": 29,
+    "rating": 2.1
+  },
+  {
+    "id": 10,
+    "name": "Product 10",
+    "categorie": "Pets",
+    "price": 55.43,
+    "stock": 86,
+    "rating": 3.1
+  },
+  {
+    "id": 11,
+    "name": "Product 11",
+    "categorie": "Beauty",
+    "price": 92.07,
+    "stock": 83,
+    "rating": 2.2
+  },
+  {
+    "id": 12,
+    "name": "Product 12",
+    "categorie": "Pets",
+    "price": 29.6,
+    "stock": 93,
+    "rating": 1
+  },
+  {
+    "id": 13,
+    "name": "Product 13",
+    "categorie": "Automotive",
+    "price": 26.41,
+    "stock": 41,
+    "rating": 2
+  },
+  {
+    "id": 14,
+    "name": "Product 14",
+    "categorie": "Automotive",
+    "price": 10.63,
+    "stock": 57,
+    "rating": 4.7
+  },
+  {
+    "id": 15,
+    "name": "Product 15",
+    "categorie": "Home",
+    "price": 23.29,
+    "stock": 72,
+    "rating": 4.9
+  },
+  {
+    "id": 16,
+    "name": "Product 16",
+    "categorie": "Toys",
+    "price": 49.45,
+    "stock": 28,
+    "rating": 3.1
+  },
+  {
+    "id": 17,
+    "name": "Product 17",
+    "categorie": "Automotive",
+    "price": 73.72,
+    "stock": 42,
+    "rating": 3.7
+  },
+  {
+    "id": 18,
+    "name": "Product 18",
+    "categorie": "Toys",
+    "price": 56.55,
+    "stock": 21,
+    "rating": 3.9
+  },
+  {
+    "id": 19,
+    "name": "Product 19",
+    "categorie": "Garden",
+    "price": 22.93,
+    "stock": 79,
+    "rating": 1.9
+  },
+  {
+    "id": 20,
+    "name": "Product 20",
+    "categorie": "Automotive",
+    "price": 70.66,
+    "stock": 97,
+    "rating": 1.8
+  },
+  {
+    "id": 21,
+    "name": "Product 21",
+    "categorie": "Toys",
+    "price": 24.77,
+    "stock": 9,
+    "rating": 1.7
+  },
+  {
+    "id": 22,
+    "name": "Product 22",
+    "categorie": "Home",
+    "price": 34.28,
+    "stock": 39,
+    "rating": 3.9
+  },
+  {
+    "id": 23,
+    "name": "Product 23",
+    "categorie": "Automotive",
+    "price": 78.03,
+    "stock": 53,
+    "rating": 3.3
+  },
+  {
+    "id": 24,
+    "name": "Product 24",
+    "categorie": "Pets",
+    "price": 4.74,
+    "stock": 75,
+    "rating": 4.3
+  },
+  {
+    "id": 25,
+    "name": "Product 25",
+    "categorie": "Sports",
+    "price": 10.35,
+    "stock": 56,
+    "rating": 4.8
+  },
+  {
+    "id": 26,
+    "name": "Product 26",
+    "categorie": "Sports",
+    "price": 70.86,
+    "stock": 37,
+    "rating": 2.6
+  },
+  {
+    "id": 27,
+    "name": "Product 27",
+    "categorie": "Sports",
+    "price": 49.22,
+    "stock": 69,
+    "rating": 2
+  },
+  {
+    "id": 28,
+    "name": "Product 28",
+    "categorie": "Toys",
+    "price": 82.28,
+    "stock": 0,
+    "rating": 4.2
+  },
+  {
+    "id": 29,
+    "name": "Product 29",
+    "categorie": "Toys",
+    "price": 21.37,
+    "stock": 80,
+    "rating": 2.6
+  },
+  {
+    "id": 30,
+    "name": "Product 30",
+    "categorie": "Pets",
+    "price": 84.29,
+    "stock": 97,
+    "rating": 3.5
+  },
+  {
+    "id": 31,
+    "name": "Product 31",
+    "categorie": "Sports",
+    "price": 52.46,
+    "stock": 69,
+    "rating": 4
+  },
+  {
+    "id": 32,
+    "name": "Product 32",
+    "categorie": "Beauty",
+    "price": 31.02,
+    "stock": 25,
+    "rating": 1.5
+  },
+  {
+    "id": 33,
+    "name": "Product 33",
+    "categorie": "Garden",
+    "price": 5.37,
+    "stock": 71,
+    "rating": 3.5
+  },
+  {
+    "id": 34,
+    "name": "Product 34",
+    "categorie": "Home",
+    "price": 14.19,
+    "stock": 35,
+    "rating": 1.2
+  },
+  {
+    "id": 35,
+    "name": "Product 35",
+    "categorie": "Toys",
+    "price": 85.76,
+    "stock": 85,
+    "rating": 2.1
+  },
+  {
+    "id": 36,
+    "name": "Product 36",
+    "categorie": "Home",
+    "price": 89.08,
+    "stock": 55,
+    "rating": 1.1
+  },
+  {
+    "id": 37,
+    "name": "Product 37",
+    "categorie": "Garden",
+    "price": 91.7,
+    "stock": 63,
+    "rating": 3.5
+  },
+  {
+    "id": 38,
+    "name": "Product 38",
+    "categorie": "Toys",
+    "price": 97.14,
+    "stock": 5,
+    "rating": 2.1
+  },
+  {
+    "id": 39,
+    "name": "Product 39",
+    "categorie": "Beauty",
+    "price": 52.76,
+    "stock": 75,
+    "rating": 0.2
+  },
+  {
+    "id": 40,
+    "name": "Product 40",
+    "categorie": "Automotive",
+    "price": 99.51,
+    "stock": 49,
+    "rating": 2
+  },
+  {
+    "id": 41,
+    "name": "Product 41",
+    "categorie": "Home",
+    "price": 53.48,
+    "stock": 62,
+    "rating": 0.1
+  },
+  {
+    "id": 42,
+    "name": "Product 42",
+    "categorie": "Home",
+    "price": 68.91,
+    "stock": 71,
+    "rating": 2.8
+  },
+  {
+    "id": 43,
+    "name": "Product 43",
+    "categorie": "Pets",
+    "price": 6.48,
+    "stock": 27,
+    "rating": 0.6
+  },
+  {
+    "id": 44,
+    "name": "Product 44",
+    "categorie": "Pets",
+    "price": 42.58,
+    "stock": 61,
+    "rating": 3.9
+  },
+  {
+    "id": 45,
+    "name": "Product 45",
+    "categorie": "Home",
+    "price": 40.29,
+    "stock": 72,
+    "rating": 3.6
+  },
+  {
+    "id": 46,
+    "name": "Product 46",
+    "categorie": "Pets",
+    "price": 93.76,
+    "stock": 41,
+    "rating": 2.5
+  },
+  {
+    "id": 47,
+    "name": "Product 47",
+    "categorie": "Home",
+    "price": 63.71,
+    "stock": 80,
+    "rating": 1.7
+  },
+  {
+    "id": 48,
+    "name": "Product 48",
+    "categorie": "Garden",
+    "price": 95.76,
+    "stock": 53,
+    "rating": 3.1
+  },
+  {
+    "id": 49,
+    "name": "Product 49",
+    "categorie": "Beauty",
+    "price": 52.81,
+    "stock": 86,
+    "rating": 2.2
+  },
+  {
+    "id": 50,
+    "name": "Product 50",
+    "categorie": "Garden",
+    "price": 97.78,
+    "stock": 49,
+    "rating": 2.9
+  },
+  {
+    "id": 51,
+    "name": "Product 51",
+    "categorie": "Beauty",
+    "price": 86.79,
+    "stock": 54,
+    "rating": 4.7
+  },
+  {
+    "id": 52,
+    "name": "Product 52",
+    "categorie": "Beauty",
+    "price": 64.73,
+    "stock": 93,
+    "rating": 2.7
+  },
+  {
+    "id": 53,
+    "name": "Product 53",
+    "categorie": "Garden",
+    "price": 9.81,
+    "stock": 52,
+    "rating": 2.5
+  },
+  {
+    "id": 54,
+    "name": "Product 54",
+    "categorie": "Beauty",
+    "price": 12.46,
+    "stock": 16,
+    "rating": 0.2
+  },
+  {
+    "id": 55,
+    "name": "Product 55",
+    "categorie": "Automotive",
+    "price": 32.03,
+    "stock": 8,
+    "rating": 3
+  },
+  {
+    "id": 56,
+    "name": "Product 56",
+    "categorie": "Pets",
+    "price": 48.51,
+    "stock": 97,
+    "rating": 2.7
+  },
+  {
+    "id": 57,
+    "name": "Product 57",
+    "categorie": "Automotive",
+    "price": 100.85,
+    "stock": 60,
+    "rating": 1.2
+  },
+  {
+    "id": 58,
+    "name": "Product 58",
+    "categorie": "Pets",
+    "price": 93.39,
+    "stock": 29,
+    "rating": 4.3
+  },
+  {
+    "id": 59,
+    "name": "Product 59",
+    "categorie": "Home",
+    "price": 24.55,
+    "stock": 16,
+    "rating": 1.7
+  },
+  {
+    "id": 60,
+    "name": "Product 60",
+    "categorie": "Home",
+    "price": 37.73,
+    "stock": 15,
+    "rating": 1.3
+  },
+  {
+    "id": 61,
+    "name": "Product 61",
+    "categorie": "Pets",
+    "price": 7.98,
+    "stock": 58,
+    "rating": 3
+  },
+  {
+    "id": 62,
+    "name": "Product 62",
+    "categorie": "Toys",
+    "price": 20.19,
+    "stock": 50,
+    "rating": 4.9
+  },
+  {
+    "id": 63,
+    "name": "Product 63",
+    "categorie": "Home",
+    "price": 27.64,
+    "stock": 84,
+    "rating": 4.1
+  },
+  {
+    "id": 64,
+    "name": "Product 64",
+    "categorie": "Sports",
+    "price": 48.56,
+    "stock": 48,
+    "rating": 3.4
+  },
+  {
+    "id": 65,
+    "name": "Product 65",
+    "categorie": "Toys",
+    "price": 90.76,
+    "stock": 50,
+    "rating": 2.8
+  },
+  {
+    "id": 66,
+    "name": "Product 66",
+    "categorie": "Sports",
+    "price": 8.24,
+    "stock": 27,
+    "rating": 1.7
+  },
+  {
+    "id": 67,
+    "name": "Product 67",
+    "categorie": "Automotive",
+    "price": 83.71,
+    "stock": 3,
+    "rating": 1.9
+  },
+  {
+    "id": 68,
+    "name": "Product 68",
+    "categorie": "Beauty",
+    "price": 10.46,
+    "stock": 31,
+    "rating": 1.3
+  },
+  {
+    "id": 69,
+    "name": "Product 69",
+    "categorie": "Toys",
+    "price": 75.58,
+    "stock": 3,
+    "rating": 1.8
+  },
+  {
+    "id": 70,
+    "name": "Product 70",
+    "categorie": "Pets",
+    "price": 70.65,
+    "stock": 10,
+    "rating": 4
+  },
+  {
+    "id": 71,
+    "name": "Product 71",
+    "categorie": "Pets",
+    "price": 100.94,
+    "stock": 32,
+    "rating": 1.4
+  },
+  {
+    "id": 72,
+    "name": "Product 72",
+    "categorie": "Garden",
+    "price": 43.98,
+    "stock": 42,
+    "rating": 1
+  },
+  {
+    "id": 73,
+    "name": "Product 73",
+    "categorie": "Pets",
+    "price": 41.71,
+    "stock": 1,
+    "rating": 3.3
+  },
+  {
+    "id": 74,
+    "name": "Product 74",
+    "categorie": "Home",
+    "price": 95.45,
+    "stock": 40,
+    "rating": 2.5
+  },
+  {
+    "id": 75,
+    "name": "Product 75",
+    "categorie": "Garden",
+    "price": 4.27,
+    "stock": 93,
+    "rating": 3.5
+  },
+  {
+    "id": 76,
+    "name": "Product 76",
+    "categorie": "Toys",
+    "price": 66.77,
+    "stock": 87,
+    "rating": 3.6
+  },
+  {
+    "id": 77,
+    "name": "Product 77",
+    "categorie": "Sports",
+    "price": 47.04,
+    "stock": 72,
+    "rating": 1.2
+  },
+  {
+    "id": 78,
+    "name": "Product 78",
+    "categorie": "Home",
+    "price": 37.99,
+    "stock": 9,
+    "rating": 4
+  },
+  {
+    "id": 79,
+    "name": "Product 79",
+    "categorie": "Toys",
+    "price": 13.49,
+    "stock": 23,
+    "rating": 2.9
+  },
+  {
+    "id": 80,
+    "name": "Product 80",
+    "categorie": "Home",
+    "price": 12.13,
+    "stock": 52,
+    "rating": 2.3
+  },
+  {
+    "id": 81,
+    "name": "Product 81",
+    "categorie": "Sports",
+    "price": 5.8,
+    "stock": 21,
+    "rating": 3.3
+  },
+  {
+    "id": 82,
+    "name": "Product 82",
+    "categorie": "Home",
+    "price": 23.25,
+    "stock": 23,
+    "rating": 3.9
+  },
+  {
+    "id": 83,
+    "name": "Product 83",
+    "categorie": "Automotive",
+    "price": 40.43,
+    "stock": 93,
+    "rating": 4.1
+  },
+  {
+    "id": 84,
+    "name": "Product 84",
+    "categorie": "Toys",
+    "price": 59.12,
+    "stock": 68,
+    "rating": 3.1
+  },
+  {
+    "id": 85,
+    "name": "Product 85",
+    "categorie": "Automotive",
+    "price": 90.55,
+    "stock": 70,
+    "rating": 3
+  },
+  {
+    "id": 86,
+    "name": "Product 86",
+    "categorie": "Sports",
+    "price": 43.92,
+    "stock": 76,
+    "rating": 3.4
+  },
+  {
+    "id": 87,
+    "name": "Product 87",
+    "categorie": "Toys",
+    "price": 37.45,
+    "stock": 44,
+    "rating": 0.1
+  },
+  {
+    "id": 88,
+    "name": "Product 88",
+    "categorie": "Automotive",
+    "price": 90.25,
+    "stock": 99,
+    "rating": 3.2
+  },
+  {
+    "id": 89,
+    "name": "Product 89",
+    "categorie": "Home",
+    "price": 35.33,
+    "stock": 5,
+    "rating": 3.7
+  },
+  {
+    "id": 90,
+    "name": "Product 90",
+    "categorie": "Beauty",
+    "price": 22.85,
+    "stock": 13,
+    "rating": 0.4
+  },
+  {
+    "id": 91,
+    "name": "Product 91",
+    "categorie": "Home",
+    "price": 58.84,
+    "stock": 47,
+    "rating": 2.2
+  },
+  {
+    "id": 92,
+    "name": "Product 92",
+    "categorie": "Sports",
+    "price": 21.53,
+    "stock": 23,
+    "rating": 4.6
+  },
+  {
+    "id": 93,
+    "name": "Product 93",
+    "categorie": "Pets",
+    "price": 71.08,
+    "stock": 22,
+    "rating": 4.8
+  },
+  {
+    "id": 94,
+    "name": "Product 94",
+    "categorie": "Garden",
+    "price": 32.8,
+    "stock": 91,
+    "rating": 3.8
+  },
+  {
+    "id": 95,
+    "name": "Product 95",
+    "categorie": "Home",
+    "price": 84.7,
+    "stock": 47,
+    "rating": 2.4
+  },
+  {
+    "id": 96,
+    "name": "Product 96",
+    "categorie": "Beauty",
+    "price": 53.48,
+    "stock": 78,
+    "rating": 3.2
+  },
+  {
+    "id": 97,
+    "name": "Product 97",
+    "categorie": "Garden",
+    "price": 20,
+    "stock": 32,
+    "rating": 3.9
+  },
+  {
+    "id": 98,
+    "name": "Product 98",
+    "categorie": "Toys",
+    "price": 37.88,
+    "stock": 7,
+    "rating": 4.2
+  },
+  {
+    "id": 99,
+    "name": "Product 99",
+    "categorie": "Sports",
+    "price": 7.51,
+    "stock": 6,
+    "rating": 2.7
+  }
+]

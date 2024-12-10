@@ -46,10 +46,33 @@ const deleteUser = async (req, res) => {
 
 }
 
-const searchUser = async (req, res) => {
-    const searchC = req.params
-    const searchUser = await user.find
-}
+const searchUser=async(req,res)=>{
+
+    try{
+        const {query} =req.params;
+        if(query.length<3){
+    
+    
+            return res.status(400).json({message:"Le longueur de la query doit dépasser 3 "});
+       
+           }
+    
+       const foundedUser=await User.find({first_name:{$regex: `^${(query)}`,$options : 'i'}}).select("-password").lean();
+    
+     
+    
+        if (foundedUser.length==0) {
+            return res.status(404).json({ message: "No user found" });
+          }
+    
+          res.json(foundedUser);
+    } catch(error){
+    
+    console.error(error);
+    res.status(500).json({message:"server error"});
+    
+    }
+    }
 
 
 module.exports = {getUsers, getUserById, updateUser, deleteUser, searchUser}

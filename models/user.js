@@ -17,13 +17,26 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    phone_number:{
-        type:Number,
-        required:true
+    role:{
+        type:[String],
+        default : "user" ,
+        // enum : ["user", "admin", "moderator"]
     },
-    role: { 
-        type: Number,
-        default: 0 
+    verified: { 
+        type: Boolean, 
+        default: false 
+    },
+    CIN:{
+        type:Number,
+    },
+    medical_diploma:{
+        type:File,
+    },
+    proof_of_practice:{
+        type:File,
+    },
+    MCRN:{
+        type:Number,
     },
     
 },{timestamps:true})
