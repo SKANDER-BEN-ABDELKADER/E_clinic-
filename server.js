@@ -2,6 +2,8 @@ require ("dotenv").config();
 // console.log(process.env.NODE_ENV);
 const mongoose = require('mongoose');
 const express = require ("express");
+const path = require('path');
+const uploadRoutes = require('./routes/uploadRoutes');
 const app = express();
 const connectDB = require("./config/db.config");
 connectDB();
@@ -17,11 +19,15 @@ app.use(cors({
 app.use(cookieParser());
 app.use(express.json());
 
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+
+
 //app.use("/",require('.routes/root'));
 app.get("/",require('./routes/rout'));
 app.use("/auth",require('./routes/authRoutes'));
 app.use("/users",require('./routes/userRoutes'));
 app.use("/products",require('./routes/productRoutes'));
+app.use("/api",require('./routes/uploadRoutes'));
 
 
 /*function GenerateProducts  (count = 100) {

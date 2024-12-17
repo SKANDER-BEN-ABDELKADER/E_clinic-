@@ -1,31 +1,29 @@
-const express = require('express');
-const router = express.Router();
 const multer = require('multer');
-const { register } = require('../controllers/authController');
-const fs = require('fs');
 const path = require('path');
 
-// Multer configuration
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, '../../uploads/')); 
   },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`);
+  filename: function (req, file, cb) {
+    const uniqueSuffix = `${Date.now()}-${file.originalname}`;
+    cb(null, uniqueSuffix);
   },
 });
 
-const upload = multer({ storage });
+// File filter for validation
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype.startsWith('image/')) {
+    cb(null, true); // Accept only images
+  } else {
+    cb(new Error('Only image files are allowed'), false);
+  }
+};
 
-// Apply middleware to route
-router.post('/register', upload.fields([
-  { name: 'medical_diploma', maxCount: 1 },
-  { name: 'proof_of_practice', maxCount: 1 },
-]), register);
+const upload = multer({
+  storage,
+  fileFilter,
+  limits: { fileSize: 1024 * 1024 * 5 }, // Limit file size to 5MB
+});
 
-const uploadDirectory = path.join(__dirname, 'uploads');
-if (!fs.existsSync(uploadDirectory)) {
-  fs.mkdirSync(uploadDirectory);
-}
-
-module.exports = router;
+module.exports = upload;

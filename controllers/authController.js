@@ -3,6 +3,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 const { allowedRoles } = require("../middelwares/verifyRoles");
+const sendEmail = require('../controllers/notification');
+
 //const {upload} = require("../middelwares/upload");
 
 // Register a new user
@@ -21,9 +23,9 @@ const register = async (req, res) => {
         }
     }
 
-    // if (!allowedRoles.includes(role)) {
-    //     return res.status(400).json({ message: "Role does not exist." });
-    // }
+    if (!allowedRoles.includes(role)) {
+        return res.status(400).json({ message: "Role does not exist." });
+    }
 
     try {
         const duplicatedEmail = await User.findOne({ email }).exec();
@@ -47,9 +49,10 @@ const register = async (req, res) => {
             MCRN: role === 'doctor' ? MCRN : undefined,
             verified: false, 
         });
-
         await newUser.save();
 
+
+        // Email verification
         const verificationToken = jwt.sign(
             { email: newUser.email },
             process.env.ACCESS_TOKEN_SECRET,
@@ -69,7 +72,7 @@ const register = async (req, res) => {
         });
 
         const mailOptions = {
-            from: 'eclinic@gmail.com',
+            from: '"eClinic" <no-reply@eclinic.com>',
             to: email,
             subject: "Verify your email",
             html: `
@@ -77,9 +80,6 @@ const register = async (req, res) => {
                 <p>Click <a href="${verificationLink}" target="_blank">here</a> to verify your email.</p>
             `,
         };
-        
-        
-        // Send email
         await transporter.sendMail(mailOptions);
 
         return res.status(201).json({ message: "User created successfully. Please check your email to verify your account." });
@@ -88,6 +88,8 @@ const register = async (req, res) => {
         return res.status(500).json({ message: "Server error." });
     }
 };
+
+
 
 // Login a user
 const login = async (req, res) => {
@@ -162,6 +164,10 @@ const verifyEmail = async (req, res) => {
         return res.status(400).json({ message: "Invalid or expired token." });
     }
 };
+
+
+
+
 
 
 
